@@ -1,0 +1,626 @@
+[2024-02-07 14:07:45,887] [INFO] [datasets.<module>:58] [PID:148130] PyTorch version 2.1.2 available.
+[2024-02-07 14:07:45,923] [INFO] [datasets.<module>:58] [PID:148133] PyTorch version 2.1.2 available.
+[2024-02-07 14:07:45,966] [INFO] [datasets.<module>:58] [PID:148131] PyTorch version 2.1.2 available.
+[2024-02-07 14:07:45,972] [INFO] [datasets.<module>:58] [PID:148132] PyTorch version 2.1.2 available.
+[2024-02-07 14:07:46,659] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-02-07 14:07:46,700] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-02-07 14:07:46,737] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-02-07 14:07:46,741] [INFO] [real_accelerator.py:191:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-02-07 14:07:47,584] [DEBUG] [axolotl.normalize_config:68] [PID:148130] [RANK:0] bf16 support detected, enabling for this configuration.[39m
+[2024-02-07 14:07:47,615] [DEBUG] [axolotl.normalize_config:68] [PID:148133] [RANK:3] bf16 support detected, enabling for this configuration.[39m
+[2024-02-07 14:07:47,655] [DEBUG] [axolotl.normalize_config:68] [PID:148131] [RANK:1] bf16 support detected, enabling for this configuration.[39m
+[2024-02-07 14:07:47,658] [DEBUG] [axolotl.normalize_config:68] [PID:148132] [RANK:2] bf16 support detected, enabling for this configuration.[39m
+[2024-02-07 14:07:47,701] [INFO] [axolotl.normalize_config:170] [PID:148133] [RANK:3] GPU memory usage baseline: 0.000GB (+0.511GB misc)[39m
+[2024-02-07 14:07:47,735] [INFO] [axolotl.normalize_config:170] [PID:148130] [RANK:0] GPU memory usage baseline: 0.000GB (+0.511GB misc)[39m
+[2024-02-07 14:07:47,999] [INFO] [axolotl.normalize_config:170] [PID:148131] [RANK:1] GPU memory usage baseline: 0.000GB (+0.511GB misc)[39m
+[2024-02-07 14:07:47,999] [INFO] [axolotl.normalize_config:170] [PID:148132] [RANK:2] GPU memory usage baseline: 0.000GB (+0.511GB misc)[39m
+                                 dP            dP   dP 
+                                 88            88   88 
+      .d8888b. dP.  .dP .d8888b. 88 .d8888b. d8888P 88 
+      88'  `88  `8bd8'  88'  `88 88 88'  `88   88   88 
+      88.  .88  .d88b.  88.  .88 88 88.  .88   88   88 
+      `88888P8 dP'  `dP `88888P' dP `88888P'   dP   dP 
+                                                       
+                                                       
+
+[2024-02-07 14:07:48,794] [DEBUG] [axolotl.load_tokenizer:241] [PID:148130] [RANK:0] EOS: 2 / </s>[39m
+[2024-02-07 14:07:48,794] [DEBUG] [axolotl.load_tokenizer:242] [PID:148130] [RANK:0] BOS: 1 / <s>[39m
+[2024-02-07 14:07:48,794] [DEBUG] [axolotl.load_tokenizer:243] [PID:148130] [RANK:0] PAD: 0 / <unk>[39m
+[2024-02-07 14:07:48,794] [DEBUG] [axolotl.load_tokenizer:244] [PID:148130] [RANK:0] UNK: 0 / <unk>[39m
+[2024-02-07 14:07:48,794] [INFO] [axolotl.load_tokenizer:255] [PID:148130] [RANK:0] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-02-07 14:07:48,795] [INFO] [axolotl.load_tokenized_prepared_datasets:187] [PID:148130] [RANK:0] Loading prepared dataset from disk at last_run_prepared/e60f067c3e100ea7e6475cf971308795...[39m
+[2024-02-07 14:07:48,980] [INFO] [axolotl.load_tokenized_prepared_datasets:189] [PID:148130] [RANK:0] Prepared dataset loaded from disk...[39m
+[2024-02-07 14:07:49,065] [DEBUG] [axolotl.load_tokenizer:241] [PID:148131] [RANK:1] EOS: 2 / </s>[39m
+[2024-02-07 14:07:49,065] [DEBUG] [axolotl.load_tokenizer:242] [PID:148131] [RANK:1] BOS: 1 / <s>[39m
+[2024-02-07 14:07:49,065] [DEBUG] [axolotl.load_tokenizer:243] [PID:148131] [RANK:1] PAD: 0 / <unk>[39m
+[2024-02-07 14:07:49,065] [DEBUG] [axolotl.load_tokenizer:244] [PID:148131] [RANK:1] UNK: 0 / <unk>[39m
+[2024-02-07 14:07:49,065] [INFO] [axolotl.load_tokenizer:255] [PID:148131] [RANK:1] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-02-07 14:07:49,078] [DEBUG] [axolotl.load_tokenizer:241] [PID:148132] [RANK:2] EOS: 2 / </s>[39m
+[2024-02-07 14:07:49,078] [DEBUG] [axolotl.load_tokenizer:242] [PID:148132] [RANK:2] BOS: 1 / <s>[39m
+[2024-02-07 14:07:49,078] [DEBUG] [axolotl.load_tokenizer:243] [PID:148132] [RANK:2] PAD: 0 / <unk>[39m
+[2024-02-07 14:07:49,078] [DEBUG] [axolotl.load_tokenizer:244] [PID:148132] [RANK:2] UNK: 0 / <unk>[39m
+[2024-02-07 14:07:49,078] [INFO] [axolotl.load_tokenizer:255] [PID:148132] [RANK:2] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-02-07 14:07:49,108] [DEBUG] [axolotl.load_tokenizer:241] [PID:148133] [RANK:3] EOS: 2 / </s>[39m
+[2024-02-07 14:07:49,108] [DEBUG] [axolotl.load_tokenizer:242] [PID:148133] [RANK:3] BOS: 1 / <s>[39m
+[2024-02-07 14:07:49,108] [DEBUG] [axolotl.load_tokenizer:243] [PID:148133] [RANK:3] PAD: 0 / <unk>[39m
+[2024-02-07 14:07:49,108] [DEBUG] [axolotl.load_tokenizer:244] [PID:148133] [RANK:3] UNK: 0 / <unk>[39m
+[2024-02-07 14:07:49,108] [INFO] [axolotl.load_tokenizer:255] [PID:148133] [RANK:3] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-02-07 14:07:51,663] [INFO] [axolotl.load_tokenized_prepared_datasets:187] [PID:148133] [RANK:3] Loading prepared dataset from disk at last_run_prepared/e60f067c3e100ea7e6475cf971308795...[39m
+[2024-02-07 14:07:51,663] [INFO] [axolotl.load_tokenized_prepared_datasets:187] [PID:148132] [RANK:2] Loading prepared dataset from disk at last_run_prepared/e60f067c3e100ea7e6475cf971308795...[39m
+[2024-02-07 14:07:51,663] [INFO] [axolotl.load_tokenized_prepared_datasets:187] [PID:148131] [RANK:1] Loading prepared dataset from disk at last_run_prepared/e60f067c3e100ea7e6475cf971308795...[39m
+[2024-02-07 14:07:51,840] [INFO] [axolotl.load_tokenized_prepared_datasets:189] [PID:148132] [RANK:2] Prepared dataset loaded from disk...[39m
+[2024-02-07 14:07:51,840] [INFO] [axolotl.load_tokenized_prepared_datasets:189] [PID:148133] [RANK:3] Prepared dataset loaded from disk...[39m
+[2024-02-07 14:07:51,845] [INFO] [axolotl.load_tokenized_prepared_datasets:189] [PID:148131] [RANK:1] Prepared dataset loaded from disk...[39m
+[2024-02-07 14:07:51,951] [DEBUG] [axolotl.log:61] [PID:148130] [RANK:0] total_num_tokens: 14591855[39m
+[2024-02-07 14:07:55,613] [DEBUG] [axolotl.log:61] [PID:148130] [RANK:0] `total_supervised_tokens: 14591855`[39m
+[2024-02-07 14:07:59,644] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:07:59,645] [DEBUG] [axolotl.log:61] [PID:148130] [RANK:0] data_loader_len: 879[39m
+[2024-02-07 14:08:01,416] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148132] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:08:01,439] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148131] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:08:01,465] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148133] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:08:01,526] [INFO] [axolotl.log:61] [PID:148130] [RANK:0] sample_packing_eff_est across ranks: [0.9984486103057861, 0.9984486103057861, 0.9984486103057861, 0.9984486103057861][39m
+[2024-02-07 14:08:01,526] [DEBUG] [axolotl.log:61] [PID:148130] [RANK:0] sample_packing_eff_est: None[39m
+[2024-02-07 14:08:01,526] [DEBUG] [axolotl.log:61] [PID:148130] [RANK:0] total_num_steps: 439[39m
+[2024-02-07 14:08:06,666] [DEBUG] [axolotl.log:61] [PID:148130] [RANK:0] total_num_tokens: 250740855[39m
+[2024-02-07 14:09:16,146] [DEBUG] [axolotl.log:61] [PID:148130] [RANK:0] `total_supervised_tokens: 250740855`[39m
+[2024-02-07 14:09:21,789] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:09:21,789] [DEBUG] [axolotl.log:61] [PID:148130] [RANK:0] data_loader_len: 15147[39m
+[2024-02-07 14:09:22,306] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148132] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:09:22,333] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148131] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:09:23,099] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148133] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:09:23,100] [INFO] [axolotl.log:61] [PID:148130] [RANK:0] sample_packing_eff_est across ranks: [0.9989560842514038, 0.9989560842514038, 0.9989560842514038, 0.9989560842514038][39m
+[2024-02-07 14:09:23,107] [DEBUG] [axolotl.log:61] [PID:148130] [RANK:0] sample_packing_eff_est: 1.0[39m
+[2024-02-07 14:09:23,107] [DEBUG] [axolotl.log:61] [PID:148130] [RANK:0] total_num_steps: 7573[39m
+[2024-02-07 14:09:23,116] [DEBUG] [axolotl.train.log:61] [PID:148130] [RANK:0] loading tokenizer... NousResearch/Llama-2-7b-hf[39m
+[2024-02-07 14:09:23,249] [DEBUG] [axolotl.load_tokenizer:241] [PID:148131] [RANK:1] EOS: 2 / </s>[39m
+[2024-02-07 14:09:23,249] [DEBUG] [axolotl.load_tokenizer:242] [PID:148131] [RANK:1] BOS: 1 / <s>[39m
+[2024-02-07 14:09:23,249] [DEBUG] [axolotl.load_tokenizer:243] [PID:148131] [RANK:1] PAD: 0 / <unk>[39m
+[2024-02-07 14:09:23,249] [DEBUG] [axolotl.load_tokenizer:244] [PID:148131] [RANK:1] UNK: 0 / <unk>[39m
+[2024-02-07 14:09:23,249] [INFO] [axolotl.load_tokenizer:255] [PID:148131] [RANK:1] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-02-07 14:09:23,256] [DEBUG] [axolotl.load_tokenizer:241] [PID:148130] [RANK:0] EOS: 2 / </s>[39m
+[2024-02-07 14:09:23,256] [DEBUG] [axolotl.load_tokenizer:242] [PID:148130] [RANK:0] BOS: 1 / <s>[39m
+[2024-02-07 14:09:23,256] [DEBUG] [axolotl.load_tokenizer:243] [PID:148130] [RANK:0] PAD: 0 / <unk>[39m
+[2024-02-07 14:09:23,256] [DEBUG] [axolotl.load_tokenizer:244] [PID:148130] [RANK:0] UNK: 0 / <unk>[39m
+[2024-02-07 14:09:23,257] [INFO] [axolotl.load_tokenizer:255] [PID:148130] [RANK:0] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-02-07 14:09:23,257] [DEBUG] [axolotl.train.log:61] [PID:148130] [RANK:0] loading model and peft_config...[39m
+[2024-02-07 14:09:23,319] [DEBUG] [axolotl.load_tokenizer:241] [PID:148133] [RANK:3] EOS: 2 / </s>[39m
+[2024-02-07 14:09:23,319] [DEBUG] [axolotl.load_tokenizer:242] [PID:148133] [RANK:3] BOS: 1 / <s>[39m
+[2024-02-07 14:09:23,319] [DEBUG] [axolotl.load_tokenizer:243] [PID:148133] [RANK:3] PAD: 0 / <unk>[39m
+[2024-02-07 14:09:23,319] [DEBUG] [axolotl.load_tokenizer:244] [PID:148133] [RANK:3] UNK: 0 / <unk>[39m
+[2024-02-07 14:09:23,319] [INFO] [axolotl.load_tokenizer:255] [PID:148133] [RANK:3] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-02-07 14:09:23,336] [INFO] [axolotl.load_model:311] [PID:148131] [RANK:1] patching with flash attention for sample packing[39m
+[2024-02-07 14:09:23,336] [INFO] [axolotl.load_model:397] [PID:148131] [RANK:1] patching _expand_mask[39m
+[2024-02-07 14:09:23,338] [INFO] [axolotl.load_model:311] [PID:148130] [RANK:0] patching with flash attention for sample packing[39m
+[2024-02-07 14:09:23,339] [INFO] [axolotl.load_model:397] [PID:148130] [RANK:0] patching _expand_mask[39m
+[2024-02-07 14:09:23,383] [DEBUG] [axolotl.load_tokenizer:241] [PID:148132] [RANK:2] EOS: 2 / </s>[39m
+[2024-02-07 14:09:23,383] [DEBUG] [axolotl.load_tokenizer:242] [PID:148132] [RANK:2] BOS: 1 / <s>[39m
+[2024-02-07 14:09:23,383] [DEBUG] [axolotl.load_tokenizer:243] [PID:148132] [RANK:2] PAD: 0 / <unk>[39m
+[2024-02-07 14:09:23,383] [DEBUG] [axolotl.load_tokenizer:244] [PID:148132] [RANK:2] UNK: 0 / <unk>[39m
+[2024-02-07 14:09:23,383] [INFO] [axolotl.load_tokenizer:255] [PID:148132] [RANK:2] No Chat template selected. Consider adding a chat template for easier inference.[39m
+[2024-02-07 14:09:23,405] [INFO] [axolotl.load_model:311] [PID:148133] [RANK:3] patching with flash attention for sample packing[39m
+[2024-02-07 14:09:23,405] [INFO] [axolotl.load_model:397] [PID:148133] [RANK:3] patching _expand_mask[39m
+[2024-02-07 14:09:23,461] [INFO] [axolotl.load_model:311] [PID:148132] [RANK:2] patching with flash attention for sample packing[39m
+[2024-02-07 14:09:23,461] [INFO] [axolotl.load_model:397] [PID:148132] [RANK:2] patching _expand_mask[39m
+[2024-02-07 14:09:50,336] [INFO] [axolotl.load_model:681] [PID:148133] [RANK:3] GPU memory usage after model load: 3.710GB (+0.255GB cache, +0.918GB misc)[39m
+[2024-02-07 14:09:50,341] [INFO] [axolotl.load_model:722] [PID:148133] [RANK:3] converting PEFT model w/ prepare_model_for_kbit_training[39m
+[2024-02-07 14:09:50,344] [INFO] [axolotl.load_model:731] [PID:148133] [RANK:3] converting modules to torch.bfloat16 for flash attention[39m
+[2024-02-07 14:09:50,348] [INFO] [axolotl.load_lora:846] [PID:148133] [RANK:3] found linear modules: ['up_proj', 'o_proj', 'k_proj', 'down_proj', 'gate_proj', 'q_proj', 'v_proj'][39m
+[2024-02-07 14:09:50,361] [INFO] [axolotl.load_model:681] [PID:148131] [RANK:1] GPU memory usage after model load: 3.710GB (+0.255GB cache, +0.918GB misc)[39m
+[2024-02-07 14:09:50,367] [INFO] [axolotl.load_model:722] [PID:148131] [RANK:1] converting PEFT model w/ prepare_model_for_kbit_training[39m
+[2024-02-07 14:09:50,370] [INFO] [axolotl.load_model:731] [PID:148131] [RANK:1] converting modules to torch.bfloat16 for flash attention[39m
+[2024-02-07 14:09:50,373] [INFO] [axolotl.load_lora:846] [PID:148131] [RANK:1] found linear modules: ['v_proj', 'q_proj', 'k_proj', 'down_proj', 'o_proj', 'gate_proj', 'up_proj'][39m
+[2024-02-07 14:09:50,404] [INFO] [axolotl.load_model:681] [PID:148130] [RANK:0] GPU memory usage after model load: 3.710GB (+0.255GB cache, +0.918GB misc)[39m
+[2024-02-07 14:09:50,410] [INFO] [axolotl.load_model:722] [PID:148130] [RANK:0] converting PEFT model w/ prepare_model_for_kbit_training[39m
+[2024-02-07 14:09:50,413] [INFO] [axolotl.load_model:731] [PID:148130] [RANK:0] converting modules to torch.bfloat16 for flash attention[39m
+[2024-02-07 14:09:50,416] [INFO] [axolotl.load_lora:846] [PID:148130] [RANK:0] found linear modules: ['gate_proj', 'down_proj', 'o_proj', 'q_proj', 'v_proj', 'up_proj', 'k_proj'][39m
+[2024-02-07 14:09:50,571] [INFO] [axolotl.load_model:681] [PID:148132] [RANK:2] GPU memory usage after model load: 3.710GB (+0.255GB cache, +0.918GB misc)[39m
+[2024-02-07 14:09:50,576] [INFO] [axolotl.load_model:722] [PID:148132] [RANK:2] converting PEFT model w/ prepare_model_for_kbit_training[39m
+[2024-02-07 14:09:50,579] [INFO] [axolotl.load_model:731] [PID:148132] [RANK:2] converting modules to torch.bfloat16 for flash attention[39m
+[2024-02-07 14:09:50,582] [INFO] [axolotl.load_lora:846] [PID:148132] [RANK:2] found linear modules: ['up_proj', 'o_proj', 'v_proj', 'gate_proj', 'k_proj', 'down_proj', 'q_proj'][39m
+trainable params: 79,953,920 || all params: 6,818,369,536 || trainable%: 1.172625208678628
+trainable params: 79,953,920 || all params: 6,818,369,536 || trainable%: 1.172625208678628
+[2024-02-07 14:09:51,152] [INFO] [axolotl.load_model:771] [PID:148131] [RANK:1] GPU memory usage after adapters: 4.008GB (+1.106GB cache, +0.918GB misc)[39m
+[2024-02-07 14:09:51,153] [INFO] [axolotl.load_model:771] [PID:148133] [RANK:3] GPU memory usage after adapters: 4.008GB (+1.106GB cache, +0.918GB misc)[39m
+trainable params: 79,953,920 || all params: 6,818,369,536 || trainable%: 1.172625208678628
+[2024-02-07 14:09:51,205] [INFO] [axolotl.load_model:771] [PID:148130] [RANK:0] GPU memory usage after adapters: 4.008GB (+1.106GB cache, +0.918GB misc)[39m
+[2024-02-07 14:09:51,287] [INFO] [axolotl.train.log:61] [PID:148130] [RANK:0] Pre-saving adapter config to ./qlora-out[39m
+[2024-02-07 14:09:51,291] [INFO] [axolotl.train.log:61] [PID:148130] [RANK:0] Starting trainer...[39m
+trainable params: 79,953,920 || all params: 6,818,369,536 || trainable%: 1.172625208678628
+[2024-02-07 14:09:51,424] [INFO] [axolotl.load_model:771] [PID:148132] [RANK:2] GPU memory usage after adapters: 4.008GB (+1.106GB cache, +0.918GB misc)[39m
+[2024-02-07 14:09:56,925] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148131] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:09:56,958] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148133] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:09:56,959] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:09:57,171] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148132] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:02,306] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148131] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:02,336] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:02,342] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148133] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:02,549] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148132] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:07,710] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148131] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:07,735] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148133] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:07,737] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:07,946] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148132] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:13,448] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148131] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:13,473] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148133] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:13,476] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:13,676] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148132] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:20,266] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148132] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:20,275] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148133] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:20,280] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148131] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:20,412] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:25,598] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148132] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:25,612] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148133] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:25,626] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148131] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+[2024-02-07 14:10:25,824] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 62685213[39m
+{'loss': 3.7065, 'learning_rate': 2e-05, 'epoch': 0.0}
+[2024-02-07 14:11:38,657] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148131] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:38,657] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148133] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:38,658] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148132] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:38,660] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:38,835] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148133] [RANK:3] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:38,835] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148132] [RANK:2] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:38,836] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148131] [RANK:1] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:38,839] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:44,068] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:44,245] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:44,423] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:44,610] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:49,604] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:49,782] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:54,775] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:54,954] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:11:59,942] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:00,120] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:05,114] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:05,292] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:10,282] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:10,466] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:15,455] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:15,634] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:20,626] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:20,804] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:25,799] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:25,977] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:30,965] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:31,150] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:36,138] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:36,316] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:41,306] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:41,483] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:46,477] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:46,655] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:51,646] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:51,830] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:56,819] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:12:56,997] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:01,987] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:02,165] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:07,161] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:07,339] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:12,329] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:12,513] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:17,503] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:17,681] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:23,004] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:23,182] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:28,176] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:28,355] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:33,351] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:33,529] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:38,519] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:38,703] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:43,693] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:43,872] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:48,862] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:49,039] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:54,032] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:54,212] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:59,208] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:13:59,387] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:04,376] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:04,555] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:09,546] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:09,725] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:14,715] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:14,893] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:19,883] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:20,061] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:25,052] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:25,230] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:30,219] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:30,398] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:35,388] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:35,566] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:40,555] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:40,734] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:45,722] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:45,900] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:50,890] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:51,067] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:56,056] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:14:56,234] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:01,223] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:01,402] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:06,390] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:06,569] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:11,557] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:11,735] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:16,724] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:16,902] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:21,891] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:22,070] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:27,058] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:27,236] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:32,226] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:32,404] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:37,393] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:37,572] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:42,560] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:42,738] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:47,728] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:47,907] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:52,896] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:53,074] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:58,064] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:15:58,242] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:03,231] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:03,409] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:08,398] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:08,577] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:13,566] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:13,744] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:18,734] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:18,913] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:23,904] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:24,083] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:29,073] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:29,251] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:34,241] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:34,419] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:39,410] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:39,588] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:44,578] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:44,757] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:49,746] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:49,925] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:54,915] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:16:55,094] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:00,085] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:00,263] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:05,253] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:05,432] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:10,420] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:10,599] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:15,587] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:15,766] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:20,755] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:20,933] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:25,922] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:26,100] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:31,089] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:31,267] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:36,255] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:36,433] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:41,422] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:41,600] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:46,589] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:46,768] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:51,757] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:51,935] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:56,924] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:17:57,102] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:02,091] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:02,269] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:07,266] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:07,444] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:12,433] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:12,611] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:17,599] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:17,777] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:22,764] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:22,943] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:27,938] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:28,116] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:33,105] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:33,289] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:38,278] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:38,457] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:43,446] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:43,624] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:48,619] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:48,797] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:53,785] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:53,970] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:58,958] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:18:59,135] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:04,123] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:04,302] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:09,296] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:09,474] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:14,462] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:14,646] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:19,632] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:19,809] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:24,798] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:24,977] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:29,970] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:30,148] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:35,138] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:35,322] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:40,311] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:40,488] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:45,476] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:45,654] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:50,647] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:50,826] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:55,815] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:19:56,001] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:00,988] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:01,166] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:06,154] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:06,333] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:11,322] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:11,499] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:16,487] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:16,666] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:21,654] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:21,831] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:26,819] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:26,998] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:31,989] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:32,167] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:37,157] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:37,336] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:42,331] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:42,509] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:47,496] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:47,683] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:52,671] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:52,848] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:57,838] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:20:58,016] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:03,004] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:03,182] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:08,171] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:08,349] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:13,339] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:13,517] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:18,513] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:18,691] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:23,679] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:23,858] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:28,847] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:29,024] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:34,012] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:34,190] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:39,180] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:39,359] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:44,347] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:44,525] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:49,513] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:49,691] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:54,679] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:54,856] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:21:59,845] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:00,022] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:05,021] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:05,200] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:10,189] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:10,368] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:15,357] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:15,536] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:20,524] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:20,701] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:25,690] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:25,868] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:30,858] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:31,037] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:36,026] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:36,204] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:41,193] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:41,372] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:46,360] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:46,538] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:51,532] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:51,711] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:56,698] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:22:56,877] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:01,868] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:02,046] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:07,034] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:07,212] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:12,201] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:12,380] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:17,368] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:17,547] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:22,534] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:22,712] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:27,702] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:27,880] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:32,868] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:33,046] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:38,034] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:38,213] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:43,201] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:43,379] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:48,366] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:48,544] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:53,533] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:53,712] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:58,700] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:23:58,879] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:03,868] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:04,046] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:09,035] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:09,213] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:14,201] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:14,380] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:19,367] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:19,545] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:24,533] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:24,711] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:29,698] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:29,877] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:34,864] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:35,042] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:40,030] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:40,207] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:45,195] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:45,373] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:50,361] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:50,539] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:55,527] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:24:55,705] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:00,693] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:00,872] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:05,860] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:06,039] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:11,027] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:11,206] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:16,195] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:16,373] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:21,362] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:21,540] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:26,529] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:26,707] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:31,696] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:31,874] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:36,864] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:37,042] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:42,031] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:42,210] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:47,199] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:47,378] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:52,367] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:52,545] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:57,533] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:25:57,711] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:02,700] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:02,878] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:07,867] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:08,046] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:13,036] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:13,215] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:18,204] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:18,382] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:23,371] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:23,551] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:28,539] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:28,718] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:33,707] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:33,885] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:38,875] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:39,053] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:44,041] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:44,219] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:49,207] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:49,386] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:54,374] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:54,552] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:59,543] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:26:59,721] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:04,711] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:04,890] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:09,880] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:10,058] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:15,048] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:15,227] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:20,216] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:20,394] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:25,385] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:25,563] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:30,554] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:30,733] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:35,723] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:35,902] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:40,892] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:41,071] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:46,065] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:46,245] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:51,234] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:51,414] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:56,404] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:27:56,583] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:01,573] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:01,751] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:06,740] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:06,920] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:11,910] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:12,089] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:17,079] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:17,259] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:22,248] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:22,427] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:27,417] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:27,596] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:32,585] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:32,765] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:37,754] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:37,932] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:42,922] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:43,101] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:48,090] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:48,269] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:53,260] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:53,438] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:58,427] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:28:58,606] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:03,594] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:03,773] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:08,763] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:08,942] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:13,932] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:14,111] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:19,100] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:19,279] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:24,269] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:24,447] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:29,437] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:29,615] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:34,605] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:34,784] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:39,771] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:39,950] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:44,939] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:45,118] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:50,107] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:50,286] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:55,277] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:29:55,456] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:00,447] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:00,626] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:05,615] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:05,795] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:10,784] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:10,964] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:15,954] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:16,134] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:21,123] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:21,302] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:26,292] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:26,471] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:31,461] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:31,641] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:36,629] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:36,808] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:41,798] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:41,976] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:46,965] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:47,144] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:52,099] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+[2024-02-07 14:30:52,280] [INFO] [axolotl.utils.samplers.multipack._len_est:184] [PID:148130] [RANK:0] packing_efficiency_estimate: 1.0 total_num_tokens per device: 3647963[39m
+{'eval_loss': 3.7243685722351074, 'eval_runtime': 1153.8051, 'eval_samples_per_second': 355.211, 'eval_steps_per_second': 22.201, 'epoch': 0.0}
+[2024-02-07 14:31:57,625] [INFO] [axolotl.callbacks.on_step_end:125] [PID:148133] [RANK:3] GPU memory usage while training: 4.511GB (+16.577GB cache, +1.399GB misc)[39m
+[2024-02-07 14:31:57,630] [INFO] [axolotl.callbacks.on_step_end:125] [PID:148130] [RANK:0] GPU memory usage while training: 4.511GB (+16.577GB cache, +1.399GB misc)[39m
+[2024-02-07 14:31:57,641] [INFO] [axolotl.callbacks.on_step_end:125] [PID:148132] [RANK:2] GPU memory usage while training: 4.511GB (+16.577GB cache, +1.399GB misc)[39m
+[2024-02-07 14:31:57,641] [INFO] [axolotl.callbacks.on_step_end:125] [PID:148131] [RANK:1] GPU memory usage while training: 4.511GB (+16.577GB cache, +1.399GB misc)[39m
+{'loss': 3.7153, 'learning_rate': 4e-05, 'epoch': 0.0}
+{'loss': 3.7147, 'learning_rate': 6e-05, 'epoch': 0.0}
+{'loss': 3.7052, 'learning_rate': 8e-05, 'epoch': 0.0}
+{'loss': 3.6615, 'learning_rate': 0.0001, 'epoch': 0.01}
+{'loss': 3.5852, 'learning_rate': 0.00012, 'epoch': 0.01}
+{'loss': 3.4626, 'learning_rate': 0.00014, 'epoch': 0.01}
+{'loss': 3.2493, 'learning_rate': 0.00016, 'epoch': 0.01}
+{'loss': 2.99, 'learning_rate': 0.00018, 'epoch': 0.01}
+{'loss': 2.7322, 'learning_rate': 0.0002, 'epoch': 0.01}
+{'loss': 2.4568, 'learning_rate': 0.00019999986067456406, 'epoch': 0.01}
+{'loss': 2.1895, 'learning_rate': 0.00019999944269864437, 'epoch': 0.01}
