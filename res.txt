@@ -1,0 +1,979 @@
+/home/ubuntu/Project_Files/env_llm/lib/python3.10/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+LoraConfig(peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path='NousResearch/Llama-2-7b-chat-hf', revision=None, task_type='CAUSAL_LM', inference_mode=True, r=32, target_modules={'up_proj', 'gate_proj', 'down_proj', 'q_proj', 'k_proj', 'v_proj', 'o_proj'}, lora_alpha=16, lora_dropout=0.05, fan_in_fan_out=None, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', loftq_config={})
+Loading checkpoint shards: 100%|██████████| 2/2 [01:42<00:00, 51.08s/it]
+/home/ubuntu/Project_Files/env_llm/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:393: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+/home/ubuntu/Project_Files/env_llm/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:398: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`. This was detected when initializing the generation config instance, which means the corresponding file may hold incorrect parameterization and should be fixed.
+  warnings.warn(
+LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm()
+        (post_attention_layernorm): LlamaRMSNorm()
+      )
+    )
+    (norm): LlamaRMSNorm()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+)
+---------------------------------------------------------
+PeftModelForCausalLM(
+  (base_model): LoraModel(
+    (model): LlamaForCausalLM(
+      (model): LlamaModel(
+        (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+        (layers): ModuleList(
+          (0-31): 32 x LlamaDecoderLayer(
+            (self_attn): LlamaSdpaAttention(
+              (q_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (k_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (v_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (o_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (rotary_emb): LlamaRotaryEmbedding()
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=11008, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=11008, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (up_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=11008, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=11008, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (down_proj): lora.Linear(
+                (base_layer): Linear(in_features=11008, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=11008, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (act_fn): SiLU()
+            )
+            (input_layernorm): LlamaRMSNorm()
+            (post_attention_layernorm): LlamaRMSNorm()
+          )
+        )
+        (norm): LlamaRMSNorm()
+      )
+      (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+    )
+  )
+)
+The model 'PeftModelForCausalLM' is not supported for text-generation. Supported models are ['BartForCausalLM', 'BertLMHeadModel', 'BertGenerationDecoder', 'BigBirdForCausalLM', 'BigBirdPegasusForCausalLM', 'BioGptForCausalLM', 'BlenderbotForCausalLM', 'BlenderbotSmallForCausalLM', 'BloomForCausalLM', 'CamembertForCausalLM', 'LlamaForCausalLM', 'CodeGenForCausalLM', 'CpmAntForCausalLM', 'CTRLLMHeadModel', 'Data2VecTextForCausalLM', 'ElectraForCausalLM', 'ErnieForCausalLM', 'FalconForCausalLM', 'FuyuForCausalLM', 'GitForCausalLM', 'GPT2LMHeadModel', 'GPT2LMHeadModel', 'GPTBigCodeForCausalLM', 'GPTNeoForCausalLM', 'GPTNeoXForCausalLM', 'GPTNeoXJapaneseForCausalLM', 'GPTJForCausalLM', 'LlamaForCausalLM', 'MarianForCausalLM', 'MBartForCausalLM', 'MegaForCausalLM', 'MegatronBertForCausalLM', 'MistralForCausalLM', 'MixtralForCausalLM', 'MptForCausalLM', 'MusicgenForCausalLM', 'MvpForCausalLM', 'OpenLlamaForCausalLM', 'OpenAIGPTLMHeadModel', 'OPTForCausalLM', 'PegasusForCausalLM', 'PersimmonForCausalLM', 'PhiForCausalLM', 'PLBartForCausalLM', 'ProphetNetForCausalLM', 'QDQBertLMHeadModel', 'Qwen2ForCausalLM', 'ReformerModelWithLMHead', 'RemBertForCausalLM', 'RobertaForCausalLM', 'RobertaPreLayerNormForCausalLM', 'RoCBertForCausalLM', 'RoFormerForCausalLM', 'RwkvForCausalLM', 'Speech2Text2ForCausalLM', 'TransfoXLLMHeadModel', 'TrOCRForCausalLM', 'WhisperForCausalLM', 'XGLMForCausalLM', 'XLMWithLMHeadModel', 'XLMProphetNetForCausalLM', 'XLMRobertaForCausalLM', 'XLMRobertaXLForCausalLM', 'XLNetLMHeadModel', 'XmodForCausalLM'].
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/home/ubuntu/Project_Files/env_llm/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:393: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/ubuntu/Project_Files/env_llm/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:398: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+Prompt is :  
+    In the PHYHIP, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (A) TCF4
+Answer is:  * (A) TCF4
+Prompt is :  
+    In the GPANK1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the ZRSR2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GTPase activating proteins)
+Answer is:  * (GTPase activating proteins)
+Prompt is :  
+    In the NRF1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* KAT2B
+Answer is:  * KAT2B
+Prompt is :  
+    In the PI4KA, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the SLC15A1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the EIF3I, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GTPase activating proteins)
+Answer is:  * (GTPase activating proteins)
+Prompt is :  
+    In the FAXDC2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (FAXDC2)
+Answer is:  * (FAXDC2)
+Prompt is :  
+    In the MT1A, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (1) ATP2B1
+Answer is:  * (1) ATP2B1
+Prompt is :  
+    In the SORT1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GATA2)
+Answer is:  * (GATA2)
+Prompt is :  
+    In the LRP5, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (G alpha subunit)
+Answer is:  * (G alpha subunit)
+Prompt is :  
+    In the RPS8, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the CD7, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the MRPL9, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the PSMC4, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the EGR1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GATA2)
+Answer is:  * (GATA2)
+Prompt is :  
+    In the SNRPD2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GTPase activating proteins)
+Answer is:  * (GTPase activating proteins)
+Prompt is :  
+    In the KRTAP4-5, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the TAF1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (pathway)
+Answer is:  * (pathway)
+Prompt is :  
+    In the VAV3, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (G alpha subunit)
+Answer is:  * (G alpha subunit)
+Prompt is :  
+    In the KRTAP5-9, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the HMOX2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (Glu) amino acid.
+Answer is:  * (Glu) amino acid.
+Prompt is :  
+    In the FOS, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (pathway)
+Answer is:  * (pathway)
+Prompt is :  
+    In the DNAJC3, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GTPase binding)
+Answer is:  * (GTPase binding)
+Prompt is :  
+    In the LGALS9, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the MYC, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the MAP3K6, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* MAP3K6
+Answer is:  * MAP3K6
+Prompt is :  
+    In the KRT20, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GATA2)
+Answer is:  * (GATA2)
+Prompt is :  
+    In the TUBGCP5, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the F2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (Pathway: Synthesis of cholesterol and sulfoquinovate)
+Answer is:  * (Pathway: Synthesis of cholesterol and sulfoquinovate)
+Prompt is :  
+    In the SNRPD2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GTPase activating proteins)
+Answer is:  * (GTPase activating proteins)
+Prompt is :  
+    In the DNM1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GTPase binding)
+Answer is:  * (GTPase binding)
+Prompt is :  
+    In the NUDC, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the CD53, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GATA2)
+Answer is:  * (GATA2)
+Prompt is :  
+    In the GSK3B, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+*  PS1
+Answer is:  *  PS1
+Prompt is :  
+    In the NAXD, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the SLC7A14, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the PVR, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (A) HIF1A
+Answer is:  * (A) HIF1A
+Prompt is :  
+    In the CLCN7, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the CCNB1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* CCNB1
+Answer is:  * CCNB1
+Prompt is :  
+    In the GSK3B, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+*  PS1
+Answer is:  *  PS1
+Prompt is :  
+    In the ATF5, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (ATF5)
+Answer is:  * (ATF5)
+Prompt is :  
+    In the CDK2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* CDK2.
+Answer is:  * CDK2.
+Prompt is :  
+    In the NDUFS8, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the PITX1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GATA2)
+Answer is:  * (GATA2)
+Prompt is :  
+    In the PIK3R1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* PI3K
+Answer is:  * PI3K
+Prompt is :  
+    In the SRPK1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GTPase activating proteins)
+Answer is:  * (GTPase activating proteins)
+Prompt is :  
+    In the HOXD12, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the BZW2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the TAB1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (G alpha subunit)
+Answer is:  * (G alpha subunit)
+Prompt is :  
+    In the CDKL4, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the PPP1R16A, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the ETS2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GTPase activating proteins)
+Answer is:  * (GTPase activating proteins)
+Prompt is :  
+    In the SORT1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GATA2)
+Answer is:  * (GATA2)
+Prompt is :  
+    In the SP1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (pathway)
+Answer is:  * (pathway)
+Prompt is :  
+    In the NKIRAS2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the IFIT2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the AURKA, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the TRA2B, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the KAT5, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the TLX3, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the XRN2, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (p53)
+Answer is:  * (p53)
+Prompt is :  
+    In the RPL5, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GTPase activating proteins)
+Answer is:  * (GTPase activating proteins)
+Prompt is :  
+    In the SNAP23, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+* (GTPase activating proteins)
+Answer is:  * (GTPase activating proteins)
+Prompt is :  
+    In the CALM1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+Prompt is :  
+    In the INPP1, which is a type of gene/protein, there is a noted ppi of the gene/protein. Which gene/protein is related to this?
+    
+
+Answer is:  
+
+
+
+
+
+
+
+
+
+
+
+#-------------------------------------------------#
+#-----------------End of the run------------------#
+
+Temp: 0.9
+
+LoraConfig(peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path='NousResearch/Llama-2-7b-hf', revision=None, task_type='CAUSAL_LM', inference_mode=True, r=32, target_modules={'up_proj', 'gate_proj', 'down_proj', 'o_proj', 'k_proj', 'v_proj', 'q_proj'}, lora_alpha=16, lora_dropout=0.05, fan_in_fan_out=None, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', loftq_config={})
+Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.94s/it]
+LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm()
+        (post_attention_layernorm): LlamaRMSNorm()
+      )
+    )
+    (norm): LlamaRMSNorm()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+)
+---------------------------------------------------------
+PeftModelForCausalLM(
+  (base_model): LoraModel(
+    (model): LlamaForCausalLM(
+      (model): LlamaModel(
+        (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+        (layers): ModuleList(
+          (0-31): 32 x LlamaDecoderLayer(
+            (self_attn): LlamaSdpaAttention(
+              (q_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (k_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (v_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (o_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (rotary_emb): LlamaRotaryEmbedding()
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=11008, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=11008, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (up_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=11008, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=11008, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (down_proj): lora.Linear(
+                (base_layer): Linear(in_features=11008, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=11008, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (act_fn): SiLU()
+            )
+            (input_layernorm): LlamaRMSNorm()
+            (post_attention_layernorm): LlamaRMSNorm()
+          )
+        )
+        (norm): LlamaRMSNorm()
+      )
+      (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+    )
+  )
+)
+The model 'PeftModelForCausalLM' is not supported for text-generation. Supported models are ['BartForCausalLM', 'BertLMHeadModel', 'BertGenerationDecoder', 'BigBirdForCausalLM', 'BigBirdPegasusForCausalLM', 'BioGptForCausalLM', 'BlenderbotForCausalLM', 'BlenderbotSmallForCausalLM', 'BloomForCausalLM', 'CamembertForCausalLM', 'LlamaForCausalLM', 'CodeGenForCausalLM', 'CpmAntForCausalLM', 'CTRLLMHeadModel', 'Data2VecTextForCausalLM', 'ElectraForCausalLM', 'ErnieForCausalLM', 'FalconForCausalLM', 'FuyuForCausalLM', 'GitForCausalLM', 'GPT2LMHeadModel', 'GPT2LMHeadModel', 'GPTBigCodeForCausalLM', 'GPTNeoForCausalLM', 'GPTNeoXForCausalLM', 'GPTNeoXJapaneseForCausalLM', 'GPTJForCausalLM', 'LlamaForCausalLM', 'MarianForCausalLM', 'MBartForCausalLM', 'MegaForCausalLM', 'MegatronBertForCausalLM', 'MistralForCausalLM', 'MixtralForCausalLM', 'MptForCausalLM', 'MusicgenForCausalLM', 'MvpForCausalLM', 'OpenLlamaForCausalLM', 'OpenAIGPTLMHeadModel', 'OPTForCausalLM', 'PegasusForCausalLM', 'PersimmonForCausalLM', 'PhiForCausalLM', 'PLBartForCausalLM', 'ProphetNetForCausalLM', 'QDQBertLMHeadModel', 'Qwen2ForCausalLM', 'ReformerModelWithLMHead', 'RemBertForCausalLM', 'RobertaForCausalLM', 'RobertaPreLayerNormForCausalLM', 'RoCBertForCausalLM', 'RoFormerForCausalLM', 'RwkvForCausalLM', 'Speech2Text2ForCausalLM', 'TransfoXLLMHeadModel', 'TrOCRForCausalLM', 'WhisperForCausalLM', 'XGLMForCausalLM', 'XLMWithLMHeadModel', 'XLMProphetNetForCausalLM', 'XLMRobertaForCausalLM', 'XLMRobertaXLForCausalLM', 'XLNetLMHeadModel', 'XmodForCausalLM'].
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/home/ubuntu/Project_Files/env_llm/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:393: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.9` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/ubuntu/Project_Files/env_llm/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:398: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+Prompt is :  
+    In the PHYHIP, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  TRIM24.
+Prompt is :  
+    In the GPANK1, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  RNF123.
+Prompt is :  
+    In the ZRSR2, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  RBM12.
+Prompt is :  
+    In the NRF1, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  TRIM24.
+Prompt is :  
+    In the PI4KA, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  RHOA.
+Prompt is :  
+    In the SLC15A1, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  CYP27A1.
+Prompt is :  
+    In the EIF3I, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  EIF3E.
+Prompt is :  
+    In the FAXDC2, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  CCDC149.
+Prompt is :  
+    In the MT1A, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  CCDC149.
+Prompt is :  
+    In the SORT1, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  CCDC149.
+Prompt is :  
+    In the LRP5, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  TMEM160B.
+Prompt is :  
+    In the RPS8, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  RPS15.
+Prompt is :  
+    In the CD7, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  TRIM24.
+Prompt is :  
+    In the MRPL9, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  UBC.
+Prompt is :  
+    In the PSMC4, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  RBM12.
+F1 Score: 0.0
+
+
+
+
+
+
+#-------------------------------------------------#
+#-----------------End of the run------------------#
+
+
+
+
+
+Temp 0
+
+
+LoraConfig(peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path='NousResearch/Llama-2-7b-hf', revision=None, task_type='CAUSAL_LM', inference_mode=True, r=32, target_modules={'up_proj', 'gate_proj', 'down_proj', 'o_proj', 'k_proj', 'v_proj', 'q_proj'}, lora_alpha=16, lora_dropout=0.05, fan_in_fan_out=None, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', loftq_config={})
+Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.94s/it]
+LlamaForCausalLM(
+  (model): LlamaModel(
+    (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+    (layers): ModuleList(
+      (0-31): 32 x LlamaDecoderLayer(
+        (self_attn): LlamaSdpaAttention(
+          (q_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (k_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (v_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (o_proj): Linear(in_features=4096, out_features=4096, bias=False)
+          (rotary_emb): LlamaRotaryEmbedding()
+        )
+        (mlp): LlamaMLP(
+          (gate_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (up_proj): Linear(in_features=4096, out_features=11008, bias=False)
+          (down_proj): Linear(in_features=11008, out_features=4096, bias=False)
+          (act_fn): SiLU()
+        )
+        (input_layernorm): LlamaRMSNorm()
+        (post_attention_layernorm): LlamaRMSNorm()
+      )
+    )
+    (norm): LlamaRMSNorm()
+  )
+  (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+)
+---------------------------------------------------------
+PeftModelForCausalLM(
+  (base_model): LoraModel(
+    (model): LlamaForCausalLM(
+      (model): LlamaModel(
+        (embed_tokens): Embedding(32000, 4096, padding_idx=0)
+        (layers): ModuleList(
+          (0-31): 32 x LlamaDecoderLayer(
+            (self_attn): LlamaSdpaAttention(
+              (q_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (k_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (v_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (o_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (rotary_emb): LlamaRotaryEmbedding()
+            )
+            (mlp): LlamaMLP(
+              (gate_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=11008, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=11008, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (up_proj): lora.Linear(
+                (base_layer): Linear(in_features=4096, out_features=11008, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=4096, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=11008, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (down_proj): lora.Linear(
+                (base_layer): Linear(in_features=11008, out_features=4096, bias=False)
+                (lora_dropout): ModuleDict(
+                  (default): Dropout(p=0.05, inplace=False)
+                )
+                (lora_A): ModuleDict(
+                  (default): Linear(in_features=11008, out_features=32, bias=False)
+                )
+                (lora_B): ModuleDict(
+                  (default): Linear(in_features=32, out_features=4096, bias=False)
+                )
+                (lora_embedding_A): ParameterDict()
+                (lora_embedding_B): ParameterDict()
+              )
+              (act_fn): SiLU()
+            )
+            (input_layernorm): LlamaRMSNorm()
+            (post_attention_layernorm): LlamaRMSNorm()
+          )
+        )
+        (norm): LlamaRMSNorm()
+      )
+      (lm_head): Linear(in_features=4096, out_features=32000, bias=False)
+    )
+  )
+)
+The model 'PeftModelForCausalLM' is not supported for text-generation. Supported models are ['BartForCausalLM', 'BertLMHeadModel', 'BertGenerationDecoder', 'BigBirdForCausalLM', 'BigBirdPegasusForCausalLM', 'BioGptForCausalLM', 'BlenderbotForCausalLM', 'BlenderbotSmallForCausalLM', 'BloomForCausalLM', 'CamembertForCausalLM', 'LlamaForCausalLM', 'CodeGenForCausalLM', 'CpmAntForCausalLM', 'CTRLLMHeadModel', 'Data2VecTextForCausalLM', 'ElectraForCausalLM', 'ErnieForCausalLM', 'FalconForCausalLM', 'FuyuForCausalLM', 'GitForCausalLM', 'GPT2LMHeadModel', 'GPT2LMHeadModel', 'GPTBigCodeForCausalLM', 'GPTNeoForCausalLM', 'GPTNeoXForCausalLM', 'GPTNeoXJapaneseForCausalLM', 'GPTJForCausalLM', 'LlamaForCausalLM', 'MarianForCausalLM', 'MBartForCausalLM', 'MegaForCausalLM', 'MegatronBertForCausalLM', 'MistralForCausalLM', 'MixtralForCausalLM', 'MptForCausalLM', 'MusicgenForCausalLM', 'MvpForCausalLM', 'OpenLlamaForCausalLM', 'OpenAIGPTLMHeadModel', 'OPTForCausalLM', 'PegasusForCausalLM', 'PersimmonForCausalLM', 'PhiForCausalLM', 'PLBartForCausalLM', 'ProphetNetForCausalLM', 'QDQBertLMHeadModel', 'Qwen2ForCausalLM', 'ReformerModelWithLMHead', 'RemBertForCausalLM', 'RobertaForCausalLM', 'RobertaPreLayerNormForCausalLM', 'RoCBertForCausalLM', 'RoFormerForCausalLM', 'RwkvForCausalLM', 'Speech2Text2ForCausalLM', 'TransfoXLLMHeadModel', 'TrOCRForCausalLM', 'WhisperForCausalLM', 'XGLMForCausalLM', 'XLMWithLMHeadModel', 'XLMProphetNetForCausalLM', 'XLMRobertaForCausalLM', 'XLMRobertaXLForCausalLM', 'XLNetLMHeadModel', 'XmodForCausalLM'].
+Truncation was not explicitly activated but `max_length` is provided a specific value, please use `truncation=True` to explicitly truncate examples to max length. Defaulting to 'longest_first' truncation strategy. If you encode pairs of sequences (GLUE-style) with the tokenizer you can select this strategy more precisely by providing a specific strategy to `truncation`.
+/home/ubuntu/Project_Files/env_llm/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:393: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/home/ubuntu/Project_Files/env_llm/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:398: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.6` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+Prompt is :  
+    In the PHYHIP, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  TRIM24.
+Prompt is :  
+    In the GPANK1, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  RNF123.
+Prompt is :  
+    In the ZRSR2, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  RBM12.
+Prompt is :  
+    In the NRF1, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  TRIM24.
+Prompt is :  
+    In the PI4KA, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  RHOA.
+Prompt is :  
+    In the SLC15A1, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  CYP27A1.
+Prompt is :  
+    In the EIF3I, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  EIF3E.
+Prompt is :  
+    In the FAXDC2, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  CCDC149.
+Prompt is :  
+    In the MT1A, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  CCDC149.
+Prompt is :  
+    In the SORT1, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  CCDC149.
+Prompt is :  
+    In the LRP5, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  TMEM160B.
+Prompt is :  
+    In the RPS8, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  RPS15.
+Prompt is :  
+    In the CD7, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  TRIM24.
+Prompt is :  
+    In the MRPL9, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  UBC.
+Prompt is :  
+    In the PSMC4, which is a type of gene/protein, there is a noted ppi of the gene/protein
+    
+Answer is:  RBM12.
+F1 Score: 0.0
+
+
+
+
+
+
+
+
+
+
+#-------------------------------------------------#
+#-----------------End of the run------------------#
+
+
+
+
+
+
+
+
+
